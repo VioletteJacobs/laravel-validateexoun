@@ -89,7 +89,7 @@ class BookController extends Controller
         $validation = $request->validate([
             "name"=> 'required|min:5|max:30',
             "text" => 'required|max:300',
-            "score" => 'required'
+            "score" => 'integer'
         ]);
 
         $update = Book::find($id);
